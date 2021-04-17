@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+| User Registration
+{% endblock title %}
+
+{% block  content %}
+
+<section class="banner_area" data-stellar-background-ratio="0.5">
+    <h2>User Registration</h2>
+    <ol class="breadcrumb">
+        <li><a href="{% url 'index'%}">Home</a></li>
+        <li><a href="#" class="active">Register</a></li>
+    </ol>
+</section>
+
+<div class="container">
+<br>
+    <div class="card text-center  text-white mt-2">
+        <form action="" method="POST" >
+            {% csrf_token %}
+            <fieldset class='form-group'>
+                <legend> User Credentials &amp; Profile</legend>
+    
+                <div class="form-row" >
+                    <div class="form-group col-md-6 mb-0">
+                        {{ form.first_name|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-md-6 mb-0">
+                        {{ form.last_name|as_crispy_field }}
+                    </div>
+                </div>
+                <div class="form-row">
+                      <div class="form-group col-md-6 mb-0">
+                        {{ form.username|as_crispy_field }}
+                      </div>
+                      <div class="form-group col-md-6 mb-0">
+                        {{ form.email|as_crispy_field }}
+                      </div>
+                </div> 
+                      <div class="form-row">
+                        <div class="form-group col-md-6 mb-0">
+                            {{ form.password1|as_crispy_field }}
+                        </div>
+                        <div class="form-group col-md-6 mb-0">
+                            {{ form.password2|as_crispy_field }}
+                        </div>
+                      </div>
+                    </fieldset>
+                    
+                <div class="form-group">
+                    <div class="d-flex justify-content-center ">
+                        <button  type="submit" class="btn" >Register</button>             
+                    </div>      
+                </div>                   
+        </form>
+        <div class="text-center" class="mt-4 mb-4">
+            <span > <small class="text-white">Have an Account Allredy?  Please </small> <a href="{% url 'main_users:login' %}"> <strong class="text-white">Sign in</strong> </a> </span>
+          </div>
+          <br>
+    </div>
+    <br>
+</div>
+
+
+{% endblock  %}
+

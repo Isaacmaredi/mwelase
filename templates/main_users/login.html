@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+<!--  -->
+
+{% block title %} | Login {% endblock title %}
+
+{% block  content %}
+
+<section class="banner_area" data-stellar-background-ratio="0.5">
+    <h2>User Login</h2>
+    <ol class="breadcrumb">
+        <li><a href="{% url 'index'%}">Home</a></li>
+        <li><a href="#" class="active">Login</a></li>
+    </ol>
+</section>
+
+<div class="container">
+<br>
+
+    <div class="card text-center  text-white mt-2">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <fieldset class='form-group'>
+                <legend> Login Credentials </legend>
+    
+              <div class="form-row">
+                <div class="form-group col-md-6 mb-0">
+                  <label for="username" >Username</label>
+                  <input type="text" name="username" class="form-control" required>
+                </div>
+              </div>
+              
+              <div class="form-row">
+
+                <div class="form-group col-md-6 mb-0">
+                  <label for="password1"> Password</label>
+                  <input type="password" name="password" class="form-control" required>
+              </div>
+
+              </div>
+                
+          </fieldset>
+                    
+    
+            </fieldset>
+          
+                <div class="form-group">
+                    <div class="d-flex justify-content-center ">
+                        <button  type="submit" class="btn" >Login</button>             
+                    </div>      
+                </div>                   
+        </form>
+        <div class="text-center" class="mt-4 mb-4">
+            <span > <small class="text-white">Do not Have an Account?  Please </small> <a href="{% url 'main_users:register' %}"> <strong class="text-white">Sign Up</strong> </a> </span>
+          </div>
+          <br>
+    </div>
+    <br>
+</div>
+
+
+{% endblock  %}
+

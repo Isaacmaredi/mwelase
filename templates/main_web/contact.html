@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %} | Contact Us {% endblock title %}
+
+
+{% block content %}
+
+    <section class="banner_area" data-stellar-background-ratio="0.5">
+            <h2>Contact Us</h2>
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="active">Contact Us</a></li>
+            </ol>
+    </section>
+        <!-- End Banner area --> 
+
+    <!--Map Area-->
+    <div class="contact_map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3593.8410692324233!2d27.898170465632603!3d-25.742768883645393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s80%20Ou%20Wapad%20Road%2C%20Ifafi%20Business%20Centr!5e0!3m2!1sen!2sza!4v1615794305598!5m2!1sen!2sza" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+        <!-- End Map -->
+
+    <section class="all_contact_info">
+        <div class="container">
+            <div class="row contact_row">
+                <div class="col-sm-4 contact_info">
+                    <h2>Contact Info</h2>
+                    
+                    <div class="location">
+                        <div class="location_laft">
+                            <a class="f_location" href="#">location</a>
+                            <br>
+                    
+                            <a href="#">office</a> 
+                            <a href="#">mobile</a>
+                            <a href="#">email</a>
+                        </div>
+                        <div class="address">
+                            <a href="#">80 Ou Wapad Road, Ifafi Business Centre, 
+                                <br> Haartebeespoort, BRITS <br>
+                            </a>
+                            <br>
+                
+                            <a href="#">+27 12 525 1046</a>
+                            <a href="#">+27 72 356 5838</a>
+                            <a href="mailto:info@mwelaseconstruction.co.za">info@mwelaseconstruction.co.za</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8 contact_info send_message">
+                    <h2>Send Us a Message</h2>
+                    <br>
+                    <br>
+
+                <div class="card text-center  text-white mt-4">
+
+                    <form action="" method="POST" >
+                        {% csrf_token %}
+                    
+                            <form action="" method="POST">
+                            {% csrf_token %}    
+                                    <fieldset  class="form-group"> 
+                                        <!-- <legend> Send Us a Message</legend> -->
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6 mb-0">
+                                                    {{form.last_name|as_crispy_field }}
+                                                    {{form.first_name|as_crispy_field }}
+                                                </div>
+                                            </div>
+                    
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6 mb-0">
+                                                    {{form.from_email|as_crispy_field }}
+                                                    {{form.subject|as_crispy_field }}
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-row ">
+                                                <div class="form-group col-md-12 mb-0">
+                                                    {{form.message|as_crispy_field}}
+                                                </div>     
+                                            </div>
+                                            
+                                </fieldset>
+                                
+                                <div class="form-group">
+                                    <div class="d-flex justify-content-center">
+                                        <button type="submit" class="btn">Submit Message</button>
+                                    </div>                   
+                                </div>
+                                <br>
+                            </form> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} | About Us{% endblock title %}
+
+{% block content %}
+
+<!-- Banner area -->
+    <section class="banner_area" data-stellar-background-ratio="0.5">
+        <h2>ABOUT US</h2>
+        <ol class="breadcrumb">
+            <li><a href="{% url 'index'%}">Home</a></li>
+            <li><a href="#" class="active">Our Team</a></li>
+        </ol>
+    </section>
+    <!-- End Banner area -->
+
+    <!-- Our Team Area -->
+    <section class="our_team_area">
+        <div class="container">
+            <div class="tittle wow fadeInUp">
+                <h2>Our Team</h2>
+                <h4>Our dedicated team of seasoned industry experts and professionals</h4>
+            </div>
+            <div class="row team_row">
+                <div class="col-md-3 col-sm-6 wow fadeInUp">
+                <div class="team_membar">
+                        <img src="{%  static 'images/team/precious3.png'%}" width="279.467" height="262.5" alt="">
+                        <div class="team_content">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            </ul>
+                            <br>
+                            <a href="#" class="name">Precious Ratlou</a>
+                            <h6>Director &amp; Founder</h6>
+                            
+                        </div>
+                </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="team_membar">
+                        <img src="{%  static 'images/team/tumi.jpg'%}" width="279.467" height="262.5" alt="">
+                        <div class="team_content">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            </ul>
+                            <a href="#" class="name">Tunisang 'Tumi' </a>
+                            <h6>Project Manager</h6>
+                        </div>
+                </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeInUp bg-secondary" data-wow-delay="0.4s">
+                <div class="team_membar">
+                        <img src="{%  static 'images/team/default.jpg'%}"  width="279.467" height="262.5" alt="">
+                        <div class="team_content">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            </ul>
+                            <a href="#" class="name">RUFARO MUKARAZI</a>
+                            <h6>Quantity Surveryor</h6>
+                        </div>
+                </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="team_membar">
+                        <img src="{%  static 'images/team/amandos.png'%}"  width="279.467" height="262.5" alt="">
+                        <div class="team_content">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            </ul>
+                            <a href="#" class="name">Amandos Seabelo <small>PrEng</small> </a>
+                            <h6>Operations Manager</h6>
+                        </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Our Team -->
+
+    <!-- call Area -->
+    <section class="call_min_area">
+        <div class="container">
+            <h2>+27 12 525 1046 / +27 72 356 5838</h2>
+            <p>Contact Us. We deliver quality services efficiently and effectively</p>
+            <div class="call_btn">
+                <a href="{% url 'main_web:contact' %}" class="button_all">GET IN TOUCH</a>
+                <!-- <a href="#" class="button_all">YOUR TESTIMONIAL</a> -->
+            </div>
+        </div>
+    </section>
+    <!-- End call Area -->
+
+<!-- Our Features Area -->
+    <section class="our_feature_area">
+        <div class="container">
+            <div class="tittle wow fadeInUp">
+                <h2>Our Features</h2>
+                <h4>Mwelase Thobs is widely known for quality of services delivered to customers</h4>
+            </div>
+            <div class="feature_row row">
+                <div class="col-md-6 feature_img">
+                    <img src="{% static 'images/mwelase11.png' %}" width="570" height="458" alt="">
+                </div>
+                <div class="col-md-6 feature_content">
+                    <div class="subtittle">
+                        <h2>WHY CHOOSE US</h2>
+                        <h5>Our experience, capacity and track record speaks for itself</h5>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="#">30+ YEARS OF EXPERIENCE</a>
+                            <p>Combined experience of more than 30 years in the civil and building construction industry </p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <i class="fa fa-rocket" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="#">QUALIFIED EXPERTS</a>
+                            <p>Our capacity to deliver is backed by a wealth of expertise and highly qualified team of Engineers, Project Managers, 
+                                Artians and Technicians     
+                            </p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <i class="fa fa-smile-o" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="#">Best Customer Services</a>
+                            <p>We consistently receive great reviews and ratings form our growing pool of customers ranging from government and state-owned enterprises</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Our Features Area -->
+
+{% endblock content %}

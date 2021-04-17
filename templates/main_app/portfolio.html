@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}| Portfolio{% endblock %}
+
+
+{% block content %}
+
+<!-- Banner area-->
+<section class="banner_area" data-stellar-background-ratio="0.5">
+    <h2>Our Projects Portfolio</h2>
+    <ol class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#" class="active">Portfolio</a></li>
+    </ol>
+</section>
+
+    <!-- End Banner area -->
+
+    <!-- blog-2 area -->
+<section class="blog_tow_area">
+    <div class="container">
+        <div class="row blog_tow_row">
+            {% for project in object_list %}
+                <div class="col-md-4 col-sm-6">
+                    <div class="renovation">
+                        <img src="{{ project.image.url }}" width="360" height="180"  alt="">
+                        <div class="renovation_content">
+                            <a class="clipboard" href="#"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
+                            <a class="tittle" href="#">{{project.client}}</a>
+                            <div class="date_comment">
+                                <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>Start Date: {{project.start_date}}</a>
+                                <a href="#"> <strong class="text-info">Progress Status: {{ project.progress_indicator}}% </strong> </a>
+                                <a href="#"> <strong class="text-warning">Location: {{ project.location}}</strong> </a>
+                            </div>
+                            <p>{{project.description}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}         
+        </div>
+    </div>
+</section>
+    <!-- End blog-2 area -->
+
+{% endblock %}
+
+

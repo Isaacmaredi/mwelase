@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content%}
+
+<!-- Slider area -->
+    <section class="slider_area row m0">
+        <div class="slider_inner">
+            <div data-thumb="{% static 'images/roads10.jpg' %}" data-src="{% static 'images/roads10.jpg'%}" >
+                <div class="camera_caption">
+                <div class="container">
+                        <h5 class=" wow fadeInUp animated">Welcome to Mwelase Thobs Website!</h5>
+                        <h3 class=" wow fadeInUp animated" data-wow-delay="0.5s">CONSTRUCTING THE FUTURE, BUILDING COMMUNITIES, INSPIRING HOPE</h3>
+                        <p class=" wow fadeInUp animated" data-wow-delay="0.8s"> A black-owned construction company committed 
+                            to the development of South Africa and its future!
+                        </p>
+                        <a class=" wow fadeInUp animated" data-wow-delay="1s" href=" {% url 'main_web:about2' %} ">Read More</a>
+                </div>
+                </div>
+            </div>
+            <div data-thumb="{% static 'images/ewc4.jpg'%}" data-src=" {% static 'images/ewc4.jpg'%}">
+                <div class="camera_caption">
+                <div class="container">
+                        <h5 class=" wow fadeInUp animated">Mwelase Thobs!</h5>
+                        <h3 class=" wow fadeInUp animated" data-wow-delay="0.5s"> We offer high quality civil &amp; building construction and maintenance services
+                        </h3>
+                        <p class=" wow fadeInUp animated" data-wow-delay="0.8s">Our team of professionals will help you achieve your project goals</p>
+                        <a class=" wow fadeInUp animated" data-wow-delay="1s" href="{% url 'main_web:about' %}">Read More</a>
+                </div>
+            </div>
+            </div>
+            <div data-thumb="{% static 'images/build6.jpg' %}" data-src="{% static 'images/build6.jpg'%}">
+                <div class="camera_caption">
+                    <div class="container">
+                            <h5 class=" wow fadeInUp animated">Mwelase Thobs! Your Partner of Choice!</h5>
+                            <h3 class=" wow fadeInUp animated" data-wow-delay="0.5s">Building long-term partnerships based on trust, performance and client satisfaction</h3>
+                            <p class=" wow fadeInUp animated" data-wow-delay="0.8s"> Our services are based on global best practice standards and methodologies
+                            </p>
+                            <a class=" wow fadeInUp animated" data-wow-delay="1s" href="{% url 'main_web:services'%} ">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- End Slider area -->
+
+<!-- Professional Builde -->
+    <section class="professional_builder row">
+        <div class="container">
+        <div class="row builder_all bg-light">
+                <div class="col-md-3 col-sm-6 builder">
+                    <i class="fa fa-road" aria-hidden="true"></i>
+                    <h4>Civil Construction</h4>
+                    <p>We have a great track record in construction industry, including building, roads, water reticulation, electrical, plumbing and paving  </p>
+                </div>
+                <div class="col-md-3 col-sm-6 builder">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <h4>Buildig Construction</h4>
+                    <p>We take on greenfield large scale buildig projects, as well as the building maintenance, including social housing, schools, hospitals, other government and corporate buildings and private homes </p>
+                </div>
+                <div class="col-md-3 col-sm-6 builder">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <h4>Always On Time</h4>
+                    <p>Our philosophy and work ethics position us to deliver qaulity projects on time and within budget
+                    </p>
+                </div>
+                <div class="col-md-3 col-sm-6 builder">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <h4>We Are Pasionate</h4>
+                    <p>Our passion for community development, effectve service delivery, and economic emancipation of the marginalised citizens makes Mwlease Thobs a partner and servoce provider of </p>
+                </div>
+        </div>
+        </div>
+    </section>
+<!-- End Professional Builder-->
+
+<!-- call Area -->
+    <section class="call_min_area">
+        <div class="container">
+            <h2>+27 12 525 1046 / +27 72 356 5838</h2>
+            <p>Contact Us. We deliver quality services efficiently and effectively</p>
+            <div class="call_btn">
+                <a href="{% url 'main_web:contact'%}" class="button_all">GET IN TOUCH</a>
+                <!-- <a href="#" class="button_all">YOUR TESTIMONIAL</a> -->
+            </div>
+        </div>
+    </section>
+    <!-- End call Area -->
+
+    <!-- Our Latesft Blog-->
+
+    <section class="latest_blog_area">
+        <div class="container">
+            <div class="tittle wow fadeInUp">
+                <h2>Featured Projects</h2>
+                <h4>Our featured work in action, demonstrating commitemnt to quality service delivery</h4>
+            </div>
+            <div class="row latest_blog">
+                {% for project in projects %}
+                <div class="col-md-4 col-sm-6 blog_content">
+                    <img src="{{project.image.url}}" width="360" height="230" alt="">
+                    <a href="#" class="blog_heading">{{project.client}}</a>
+                    <h4><small> </small><a href="#"></a><small>start date</small> {{project.start_date}}</h4>
+                    <p>{{project.description}} at {{project.location}} <br>
+                        <a class=" wow fadeInUp animated" data-wow-delay="1s" href=" {% url 'main_app:portfolio' %} ">See More</a>
+                    </p>
+                
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+<!-- End Our Latest Blog Area -->
+
+<!-- Our Partners Area -->
+<section class="our_partners_area">
+    <div class="container">
+        <div class="tittle wow fadeInUp">
+            <h2>Our Clients</h2>
+            <h4>We view our clients as partners in our joint strive for efficient and effective service delivery</h4>
+        </div>
+        <div class="partners">
+            <div class="item"><a href="https://www.kagiso.co.za/" target="_blank"><img src="{% static 'images/client_logo/kagiso.png' %}" alt=""></a></div>
+            <div class="item"><a href="https://provincialgovernment.co.za/units/view/36/gauteng/infrastructure-development" target="_blank"><img src="{% static 'images/client_logo/gpinfra.png' %}" alt=""></a></div>
+            <div class="item"> <a href="https://themvulatrust.org.za/" target="_blank"><img src="{% static 'images/client_logo/mvula.png' %}" ><img src=>alt=""></a></div>
+            <div class="item"><a href="https://www.prasa.com/" target="_blank"><img src="{% static 'images/client_logo/prasa.png' %}"><img src=>alt=""></a></div>
+            <div class="item"> <a href="https://www.jhbproperty.co.za" target="_blank"> <img src="{% static 'images/client_logo/jhb_property.png' %}" alt=""></a></div>
+        </div>
+    </div>
+    
+</section>
+<!-- End Our Partners Area -->
+{% endblock %}
+
+
+

@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} | About {% endblock title %}
+
+{% block content %}
+
+<!-- Banner area -->
+    <section class="banner_area" data-stellar-background-ratio="0.5">
+        <h2>ABOUT US</h2>
+        <ol class="breadcrumb">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="#" class="active">WHAT WE DO</a></li>
+        </ol>
+    </section>
+<!-- End Banner area -->
+
+<!-- Building Construction Area -->
+    <section class="building_construction_area">
+        <div class="container">
+            <div class="row building_construction_row">
+                <div class="col-sm-8 constructing_laft">
+                    <h2>Construction &amp; Maintenance</h2>
+                    <img src="{% static 'images/roads13.jpg'%} " alt="">
+                    <a href="#">Civil Construction</a>
+                    <p>We specialise in civil and building construction, which include, but not limited to road construction, water reticulation, electrical works, sports complex and road maintennance.</p>
+                    <p> We also provide consulting services in Project Management, Health &amp; Safety, as well as Quantity Surveing.</p>
+                        
+                        
+                        <div class="col-md-6 ipsum">
+                            
+                        
+                            <p> Mwelase is endowed  with and utilises state-of-the-art equipment, which include: </p>
+                            <ul class="excavator">
+                                <li><i class="fa fa-chevron-circle-right"></i>Hydraulic Excavators</li>
+                                <li><i class="fa fa-chevron-circle-right"></i>Front-End Loaders</li>
+                                <li><i class="fa fa-chevron-circle-right"></i>Tipper Trucks</li>
+                                <li><i class="fa fa-chevron-circle-right"></i>Heavy Duty Drillers</li>
+                                <li><i class="fa fa-chevron-circle-right"></i>Graders &amp; more</li>
+                            </ul>
+                        </div>
+                        
+                    <div class="col-md-6 ipsum_img"><img src="{% static 'images/sports1.jpg'%}"  alt=""></div>
+                
+                </div>
+                <div class="col-sm-4 constructing_right">
+                    <h2>Our Service Offerings</h2>
+                    <ul class="painting">
+                        <li><a href="#"><i class="fa fa-building" aria-hidden="true"></i>Building Construction</a></li>
+                        <li><a href="#"><i class="fa fa-cogs" aria-hidden="true"></i>Water Reticulation</a></li>
+                        <li><a href="#"><i class="fa fa-paint-brush" aria-hidden="true"></i>Electrical, Plumbing &amp; Painting</a></li>
+                        <li><a href="#"><i class="fa fa-wrench" aria-hidden="true"></i>Maintenance &amp; Renovations</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Building Construction Area -->
+
+<!--Building Construction Area -->
+<section class="building_construction_area" id="building">
+    <div class="container">
+        <div class="row building_construction_row">
+            <div class="col-sm-8 constructing_laft">
+                <h2>Roads Construction &amp; Maintenance</h2>
+                <img src="{% static 'images/roads14.jpg'%} " alt="">
+
+                <a href="#">Building Construction &amp; Maintenance</a>
+                <p>Mwelase Thobs offer quality services for building and renovations of houses, schools, hospitals and other government buildings and offices. 
+                    We pride ourselves in extensive work done in the building of low-cost quality houses for the social housing schemes across all spheres of governement
+                </p>
+                <p> We also provide consulting services in Project Management, Health &amp; Safety, as well as Quantity Surveing.</p>
+                    
+                <div class="col-md-6 ipsum">
+                    <p>At <strong> Mwelase Thobs</strong>, safety comes first, hence we make sure our staff get professional
+                        training and apply safety measures. We provide our staff approved and appropriate safety clothing.</p>
+                    <br>
+                
+                </div>
+                    
+                <div class="col-md-6 ipsum_img"><img src="{% static 'images/build9.jpg'%}"  alt=""></div>
+                <div class="col-md-12 p0">
+                    <p>We achieve top results by employing and contracting the best, most motivated and skilled individuals for any work being carried out, and by applying standards of excellence in all areas of involvement.</p>
+                </div>
+            </div>
+            <div class="col-sm-4 constructing_right">
+                <br>
+                <br>
+                <br>
+                
+                <div class="contact_us">
+                    <h4>Get in Touch</h4>
+                    <a href="#" class="contac_namber"> <i class="fa fa-phone"> <strong > &nbsp;+27 12 525 1046 </strong> </i> </a>
+                    <a href="#" class="contac_namber"> <i class="fa fa-mobile">  <strong> &nbsp; &nbsp;+27 72 356 5838 </strong></i> </a>
+                    <a href="mailto:info@mwelaseconstruction.co.za" class="contac_namber"> <i class="fa fa-envelope-o"> <strong > &nbsp;info@mwelaseconstruction.co.za </strong> </i> </a>
+                    <p> No project or assignment is too big or too small for us. Always at your service! </p>
+                    <p>Our admin staff will be please to address any query about our service offerings</p>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="{% url 'main_web:contact' %}" class="button_all">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Buildning Construction Area-->
+
+<!-- Water Reticulation Area--> 
+<section class="our_services_tow" id="water">
+    <div class="container">
+        <div class="architecture_area services_pages">
+            
+            <div class="portfolio_item portfolio_2" >
+                <div class="grid-sizer-2"></div>
+                    <div class="single_facilities col-sm-7 painting building painting adversting">
+                        <div class="who_we_area">
+                            <div class="subtittle">
+                                <h2>Water Reticulation</h2>
+                            </div>
+                            <p>Mwelase Thobs has implemented  large scale project in the water reticulation sector</p>
+                            <p> We have delivered turnkey projects for a number of district and Local municipalities in various Provinces. 
+                            Our work also includes specialised, professional and high quality services, including Project Management, Managament Consulting, Health &amp; Safety, as well as Quantity Surveing</p>
+                            <a href=" {% url 'main_web:contact'%} " class="button_all">Contact Now</a>
+                        </div>
+                    </div>
+                <div class="single_facilities col-sm-5 painting webdesign">
+                    <img src="{% static 'images/water2.jpg' %}" width="467.383" height="445" class="border border-danger" alt="" >
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Water Reticulation Area--> 
+
+{% endblock %}
+
+
+
