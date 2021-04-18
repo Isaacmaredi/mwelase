@@ -26,7 +26,7 @@ SECRET_KEY = 'v44@pd7m1ixiqj#hhy+()6(tzj)yo9=wto&hecojws)p^42x&g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -140,5 +140,5 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 try:
     from .local_settings import *
 except ImportError:
-    pass #
+    pass 
 
