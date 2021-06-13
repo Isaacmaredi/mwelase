@@ -25,7 +25,7 @@ urlpatterns = [
     path('',views.index,name='index'), 
     path('main_web/',include('main_web.urls'),name='main_web'), 
     path('main_users/', include('main_users.urls'), name='main_users'),
-    path('main_app/',include('main_app.urls'), name='main_app')
+    path('main_app/',include('main_app.urls'), name='main_app'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 admin.site.site_header = 'Mwelase Website Administration'

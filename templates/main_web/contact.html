@@ -51,52 +51,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-8 contact_info send_message">
-                    <h2>Send Us a Message</h2>
-                    <br>
-                    <br>
 
-                <div class="card text-center  text-white mt-4">
+                
 
-                    <form action="" method="POST" >
-                        {% csrf_token %}
-                    
-                            <form action="" method="POST">
-                            {% csrf_token %}    
-                                    <fieldset  class="form-group"> 
-                                        <!-- <legend> Send Us a Message</legend> -->
-                                            <div class="form-row">
-                                                <div class="form-group col-md-6 mb-0">
-                                                    {{form.last_name|as_crispy_field }}
-                                                    {{form.first_name|as_crispy_field }}
-                                                </div>
-                                            </div>
-                    
-                                            <div class="form-row">
-                                                <div class="form-group col-md-6 mb-0">
-                                                    {{form.from_email|as_crispy_field }}
-                                                    {{form.subject|as_crispy_field }}
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="form-row ">
-                                                <div class="form-group col-md-12 mb-0">
-                                                    {{form.message|as_crispy_field}}
-                                                </div>     
-                                            </div>
-                                            
-                                </fieldset>
-                                
-                                <div class="form-group">
-                                    <div class="d-flex justify-content-center">
-                                        <button type="submit" class="btn">Submit Message</button>
-                                    </div>                   
-                                </div>
-                                <br>
-                            </form> 
-                        </div>
-                    </form>
-                </div>
             </div>
         </div>
     </section>
