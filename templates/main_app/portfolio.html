@@ -29,8 +29,8 @@
                             <a class="clipboard" href="#"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
                             <a class="tittle" href="#">{{project.client}}</a>
                             <div class="date_comment">
-                                <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>Start Date: {{project.start_date|date:'M Y'}}</a>
-                                <a href="#"> <strong class="text-info">Progress Status: {{ project.progress_indicator}}% </strong> </a>
+                                <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>Start Date: {{project.start_date|date:"M Y"}}</a> <br>
+                                <a href="#"> <strong class="text-info">Progress Status: {{ project.progress_indicator}}% </strong> </a> <br>
                                 <a href="#"> <strong class="text-warning">Location: {{ project.location}}</strong> </a>
                             </div>
                             <p>{{project.description}}</p>
