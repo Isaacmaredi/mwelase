@@ -93,14 +93,14 @@
         <div class="container">
             <div class="tittle wow fadeInUp">
                 <h2>Featured Projects</h2>
-                <h4>Our featured work in action, demonstrating commitemnt to quality service delivery</h4>
+                <h4>Some of our featured completed projects in action, demonstrating commitemnt to quality service delivery</h4>
             </div>
             <div class="row latest_blog">
                 {% for project in projects %}
                 <div class="col-md-4 col-sm-6 blog_content">
                     <img src="{{project.image.url}}" width="360" height="230" alt="">
                     <a href="#" class="blog_heading">{{project.client}}</a>
-                    <h4><small> </small><a href="#"></a><small>start date</small> {{project.start_date}}</h4>
+                    <h4><small> </small><a href="#"></a><small>start date</small> {{project.start_date|date:"d F, Y"}}</h4>
                     <p>{{project.description}} at {{project.location}} <br>
                         <a class=" wow fadeInUp animated" data-wow-delay="1s" href=" {% url 'main_app:portfolio' %} ">See More</a>
                     </p>
